@@ -1,61 +1,50 @@
-<form>
-    <table id="table">
-        <tr>
-            <td>
-                <Label>Nombre</Label>
-                <input type="text" class="inp" id="signup-nombre" ng-model="nombre" required>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <Label>Apellido</Label>
-                <input type="text" class="inp" id="signup-apellido" ng-model="apellido" required>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <Label>Cédula</Label>
-                <input type="text" class="inp" id="signup-cedula" ng-model="cedula" required>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <Label>Telefono</Label>
-                <input type="text" class="inp"id="signup-telefono"  ng-model="telefono" required>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <Label>Dirección</Label>
-                <textarea id="direccion" name="direccion" id="signup-direccion" rows="3" cols="25" class="inp" ng-model="direccion" required>
-            </textarea>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <Label>Correo</Label>
-                <input type="email" class="inp" id="signup-email" ng-model="email"
-                    placeholder="Email" required>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <Label>Contraseña</Label>
-                <input type="password" class="inp" id="signup-password" ng-model="contrasena"
-                    placeholder="Contraseña" required>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="text" class="inp" id="signup-lat" ng-model="lati" disabled>
-                <!-- <input type="number" id="TextBox_lat" ng-model="lati" class="inp" disabled>   -->
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="text" class="inp" id="signup-log" ng-model="long" required>
-                <!-- <input type="number" id="TextBox_log" ng-model="long" class="inp" disabled> -->
-            </td>
-        </tr>
-    </table>
-</form>
+<div class="row">
+    <div class="col-md-6 mx-auto mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="text-center">Registrate</h1>
+                <form [formGroup] = "registerForm" (ngSubmit)="onRegister()" >
+                    <div class="form-group">
+                        <label for="cedula">Cedula</label>
+                        <input type="text" class="form-control" formControlName="cedula"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control" formControlName="apellido"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" formControlName="nombre"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Telefono</label>
+                        <input type="text" class="form-control" formControlName="telefono"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="latitud">Latitud</label>
+                        <input type="text" class="form-control" formControlName="lat"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="longitud">Loongitud</label>
+                        <input type="text" class="form-control" formControlName="lon"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Eletrónico</label>
+                        <input type="email" class="form-control" formControlName="email"/>
+                    </div>
+                    <div class="form-group">
+                        <label for=password>Contraseña</label>
+                        <input type="password" class="form-control" formControlName="password"/>
+                    </div>
+                  
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Registrar</button>
+                    
+                </form>
+                
+                <div class="form-group mt-3">
+                    <p>Tienes una cuenta? <a [routerLink] = "['/login']">Iniciar Sesión</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

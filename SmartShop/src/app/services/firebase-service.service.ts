@@ -13,8 +13,17 @@ export class FirebaseServiceService {
       return this.firestore.collection('Usuarios').snapshotChanges(); 
     }
     // Metodo para crear Usuario
-    createUsuario(Usuario: any){
-      return this.firestore.collection('Usuarios').add(Usuario);
+    createUsuario(_email, _cedula, _apellido, _nombre, _lat, _lon, _telefono){
+      return this.firestore.collection('Usuarios').add({
+        email: _email, 
+        cedula: _cedula, 
+        apellido: _apellido, 
+        nombre: _nombre, 
+        lat: _lat, 
+        lon: _lon, 
+        telefono: _telefono,
+        tipo: "cliente"
+      });
     }
     // Metodo para editar Usuario
     updateUsuario(id: any,Usuario: any){
