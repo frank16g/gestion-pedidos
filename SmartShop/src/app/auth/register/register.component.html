@@ -1,0 +1,61 @@
+<form>
+    <table id="table">
+        <tr>
+            <td>
+                <Label>Nombre</Label>
+                <input type="text" class="inp" id="signup-nombre" ng-model="nombre" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Label>Apellido</Label>
+                <input type="text" class="inp" id="signup-apellido" ng-model="apellido" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Label>Cédula</Label>
+                <input type="text" class="inp" id="signup-cedula" ng-model="cedula" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Label>Telefono</Label>
+                <input type="text" class="inp"id="signup-telefono"  ng-model="telefono" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Label>Dirección</Label>
+                <textarea id="direccion" name="direccion" id="signup-direccion" rows="3" cols="25" class="inp" ng-model="direccion" required>
+            </textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Label>Correo</Label>
+                <input type="email" class="inp" id="signup-email" ng-model="email"
+                    placeholder="Email" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <Label>Contraseña</Label>
+                <input type="password" class="inp" id="signup-password" ng-model="contrasena"
+                    placeholder="Contraseña" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" class="inp" id="signup-lat" ng-model="lati" disabled>
+                <!-- <input type="number" id="TextBox_lat" ng-model="lati" class="inp" disabled>   -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" class="inp" id="signup-log" ng-model="long" required>
+                <!-- <input type="number" id="TextBox_log" ng-model="long" class="inp" disabled> -->
+            </td>
+        </tr>
+    </table>
+</form>
