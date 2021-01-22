@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { ClientesListarProductosComponent } from './components/clientes-listar-productos/clientes-listar-productos.component';
+import { PedidosComponent } from './components/pedidos/pedidos.component';
+import { ClientePedidosRealizadosComponent } from './components/cliente-pedidos-realizados/cliente-pedidos-realizados.component';
 
 
 const routes: Routes = [
@@ -12,8 +13,12 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'listarProductos',
-    component: ClientesListarProductosComponent
+    path: 'cliente',
+    component: PedidosComponent
+  },
+  {
+    path: 'pedidosRealizados',
+    component: ClientePedidosRealizadosComponent
   }
 ];
 
