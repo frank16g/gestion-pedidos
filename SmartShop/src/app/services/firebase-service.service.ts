@@ -33,5 +33,8 @@ export class FirebaseServiceService {
     deleteUsuario(id: any){
       return this.firestore.collection('Usuarios').doc(id).delete();
     }
-
+    // Metodo para obtener Productos
+    getProductos(){
+      return this.firestore.collection('Productos').snapshotChanges(); 
+    }
 }
