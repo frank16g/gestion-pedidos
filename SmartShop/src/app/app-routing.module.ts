@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { ClientePedidosRealizadosComponent } from './components/cliente-pedidos-realizados/cliente-pedidos-realizados.component';
-
+import { ProductsCrudComponent } from './components/products-crud/products-crud.component';
 import { CheckLoginGuard } from './guards/check-login.guard';
 import { RepartidorPedidosNuevosComponent} from './components/repartidor-pedidos-nuevos/repartidor-pedidos-nuevos.component';
 import {RepartidorPedidosRealizadosComponent} from './components/repartidor-pedidos-realizados/repartidor-pedidos-realizados.component';
@@ -51,6 +51,10 @@ const routes: Routes = [
   {
     path:'admin-repartidores',
     component:AdminRepartidoresComponent
+  },
+  {
+    path: 'admin-productos',
+    component:ProductsCrudComponent
   }
 
 ];
