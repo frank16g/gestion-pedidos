@@ -37,4 +37,23 @@ export class FirebaseServiceService {
     getProductos(){
       return this.firestore.collection('Productos').snapshotChanges(); 
     }
+    // Metodo para crear Producto
+    createProducto(_producto){
+      return this.firestore.collection('Productos').add(_producto);
+    }
+    // Metodo para Actualizar Producto
+    updateProducto(id: any,producto: any){
+      console.log(producto);
+      return this.firestore.collection('Productos').doc(id).update(producto);
+    }
+    // Metodo para Eliminar Producto
+    deleteProducto(id: any){
+      return this.firestore.collection('Productos').doc(id).delete();
+    }
+    // Metodo para obtener las Categorias de Pedidos
+    getCategorias(){
+      return this.firestore.collection('Categorias').snapshotChanges(); 
+    }
+
+
 }
