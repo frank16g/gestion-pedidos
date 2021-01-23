@@ -37,6 +37,7 @@ export class FirebaseServiceService {
     getProductos(){
       return this.firestore.collection('Productos').snapshotChanges(); 
     }
+
     // Metodo para crear Producto
     createProducto(_producto){
       return this.firestore.collection('Productos').add(_producto);
@@ -54,6 +55,7 @@ export class FirebaseServiceService {
     getCategorias(){
       return this.firestore.collection('Categorias').snapshotChanges(); 
     }
+
 
 
 }
