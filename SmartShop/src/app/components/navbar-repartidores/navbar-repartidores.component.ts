@@ -3,12 +3,11 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../auth/services/auth.service'
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
-
+  selector: 'app-navbar-repartidores',
+  templateUrl: './navbar-repartidores.component.html',
+  styleUrls: ['./navbar-repartidores.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarRepartidoresComponent implements OnInit {
 
   constructor(
     private authService:AuthService,
@@ -24,5 +23,4 @@ export class NavbarComponent implements OnInit {
      this.router.navigate(['./home']);
     });
   }
-
 }

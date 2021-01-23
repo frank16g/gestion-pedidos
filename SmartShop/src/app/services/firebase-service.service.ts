@@ -37,4 +37,15 @@ export class FirebaseServiceService {
     getProductos(){
       return this.firestore.collection('Productos').snapshotChanges(); 
     }
+    //  getTipoUser(_email){
+    //    var users= this.firestore.collection('Usuarios').snapshotChanges(); 
+    //    users.forEach(element => {
+    //      if(element.values()==_email){
+    //       return element;
+    //      }
+    //    });
+    //  }
+    getUsuario(_email:string){
+      return this.firestore.collection('Usuarios',ref=> ref.where('correo','==',_email)).snapshotChanges();
+    }
 }

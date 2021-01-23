@@ -3,12 +3,11 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../auth/services/auth.service'
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
-
+  selector: 'app-navbar-admin',
+  templateUrl: './navbar-admin.component.html',
+  styleUrls: ['./navbar-admin.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarAdminComponent implements OnInit {
 
   constructor(
     private authService:AuthService,
@@ -17,12 +16,10 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   logout(){
     this.authService.logout()
     .then(() => {
      this.router.navigate(['./home']);
     });
   }
-
 }

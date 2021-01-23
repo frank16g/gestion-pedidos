@@ -12,6 +12,16 @@ import { ClientesListarProductosComponent } from './components/clientes-listar-p
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ClientePedidosRealizadosComponent } from './components/cliente-pedidos-realizados/cliente-pedidos-realizados.component';
+import { AuthService} from '../app/auth/services/auth.service'; 
+import { CheckLoginGuard } from './guards/check-login.guard';
+import { RepartidorPedidosNuevosComponent } from './components/repartidor-pedidos-nuevos/repartidor-pedidos-nuevos.component';
+import { RepartidorPedidosRealizadosComponent } from './components/repartidor-pedidos-realizados/repartidor-pedidos-realizados.component';
+import { NavbarRepartidoresComponent } from './components/navbar-repartidores/navbar-repartidores.component';
+import { AdminHomeComponent } from './components/admin-home/admin-home.component';
+import { NavbarAdminComponent } from './components/navbar-admin/navbar-admin.component';
+import { AdminRepartidoresComponent } from './components/admin-repartidores/admin-repartidores.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,14 +31,20 @@ import { ClientePedidosRealizadosComponent } from './components/cliente-pedidos-
     HomeComponent,
     PedidosComponent,
     NavbarComponent,
-    ClientePedidosRealizadosComponent
+    ClientePedidosRealizadosComponent,
+    RepartidorPedidosNuevosComponent,
+    RepartidorPedidosRealizadosComponent,
+    NavbarRepartidoresComponent,
+    AdminHomeComponent,
+    NavbarAdminComponent,
+    AdminRepartidoresComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [],
+  providers: [CheckLoginGuard],//AuthService,CheckLoginGuard
   bootstrap: [AppComponent]
 })
 export class AppModule { }
