@@ -12,6 +12,9 @@ import { ClientesListarProductosComponent } from './components/clientes-listar-p
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ClientePedidosRealizadosComponent } from './components/cliente-pedidos-realizados/cliente-pedidos-realizados.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NavbarLoginComponent } from './auth/navbar-login/navbar-login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,12 +24,15 @@ import { ClientePedidosRealizadosComponent } from './components/cliente-pedidos-
     HomeComponent,
     PedidosComponent,
     NavbarComponent,
-    ClientePedidosRealizadosComponent
+    ClientePedidosRealizadosComponent,
+    NavbarLoginComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
