@@ -12,9 +12,15 @@ import { ClientesListarProductosComponent } from './components/clientes-listar-p
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ClientePedidosRealizadosComponent } from './components/cliente-pedidos-realizados/cliente-pedidos-realizados.component';
+<<<<<<< HEAD
 
 import { ProductsComponent } from './components/products/products.component';
 
+=======
+import { HttpClientModule } from '@angular/common/http';
+import { NavbarLoginComponent } from './auth/navbar-login/navbar-login.component';
+import { ProductsComponent } from './components/products/products.component';
+>>>>>>> parent of 418bd23... restart
 import { FormsModule } from '@angular/forms';
 import { ProductsCrudComponent } from './components/products-crud/products-crud.component';
 import { AngularFireStorageModule } from '@angular/fire/storage';
@@ -27,6 +33,12 @@ import { NavbarRepartidoresComponent } from './components/navbar-repartidores/na
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { NavbarAdminComponent } from './components/navbar-admin/navbar-admin.component';
 import { AdminRepartidoresComponent } from './components/admin-repartidores/admin-repartidores.component';
+<<<<<<< HEAD
+=======
+import { AdminCrearRepartidorComponent } from './components/admin-crear-repartidor/admin-crear-repartidor.component';
+
+
+>>>>>>> parent of 418bd23... restart
 
 @NgModule({
   declarations: [
@@ -38,6 +50,13 @@ import { AdminRepartidoresComponent } from './components/admin-repartidores/admi
     PedidosComponent,
     NavbarComponent,
     ClientePedidosRealizadosComponent,
+<<<<<<< HEAD
+=======
+
+    NavbarLoginComponent,
+    
+
+>>>>>>> parent of 418bd23... restart
     ProductsComponent,
     ProductsCrudComponent,
     RepartidorPedidosNuevosComponent,
@@ -45,16 +64,33 @@ import { AdminRepartidoresComponent } from './components/admin-repartidores/admi
     NavbarRepartidoresComponent,
     AdminHomeComponent,
     NavbarAdminComponent,
+<<<<<<< HEAD
     AdminRepartidoresComponent
+=======
+    AdminRepartidoresComponent,
+    AdminCrearRepartidorComponent
+
+>>>>>>> parent of 418bd23... restart
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
+=======
+
+    AngularFireModule.initializeApp(environment.firebase),
+    HttpClientModule,
+
+>>>>>>> parent of 418bd23... restart
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule
   ],
+<<<<<<< HEAD
   providers: [CheckLoginGuard],//AuthService,CheckLoginGuard
+=======
+  providers: [],//AuthService,CheckLoginGuard
+>>>>>>> parent of 418bd23... restart
   bootstrap: [AppComponent]
 })
 export class AppModule { }

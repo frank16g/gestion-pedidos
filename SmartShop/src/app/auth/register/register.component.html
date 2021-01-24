@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="row">
     <div class="col-md-6 mx-auto mt-5">
         <div class="card">
@@ -11,10 +12,96 @@
                     <div class="form-group">
                         <label for="apellido">Apellido</label>
                         <input type="text" class="form-control" formControlName="apellido"/>
+=======
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" routerLink="/home" routerLinkActive="active"><img src="./assets/hand_truck.svg" alt="" />Shop</a>
+  
+  
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+  
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login"  routerLinkActive="active">Login</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" routerLink="/register"  routerLinkActive="active">Registro</a></li>
+        </ul>
+      </div>
+    </div>
+  
+  </nav>
+
+<div class="" id="reg">
+    <div class="col-md-12 mx-auto mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 style="margin-top: 5px;">Registrate</h1>
+                <form [formGroup] = "registerForm" (ngSubmit)="onRegister()" >
+                    <div class="form-group">
+                        <table id="tab">
+                            <tr>
+                                <td id="lbl">
+                                    <label for="cedula">Cédula:</label>
+                                </td>
+                                <td id="txt">
+                                    <input  type="text" class="form-control" formControlName="cedula"  required/>
+                                </td>
+                                <td id="esp"></td>
+                                <td id="lbl">
+                                    <label for="apellido">Apellido: </label>
+                                </td>
+                                <td id="txt">
+                                    <input type="text" class="form-control" formControlName="apellido" required/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="lbl">
+                                    <label for="cedula">Nombre:</label>
+                                </td>
+                                <td id="txt">
+                                    <input type="text" class="form-control" formControlName="nombre" required/>
+                                </td>
+                                <td id="esp"></td>
+                                <td id="lbl">
+                                    <label for="cedula">Cédula:</label>
+                                </td>
+                                <td id="txt">
+                                    <input type="text" class="form-control" formControlName="telefono"  required/> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="lbl">
+                                    <label for="email">Correo:</label>
+                                </td>
+                                <td id="txt">
+                                    <input type="email" class="form-control" formControlName="email"  required/>
+                                </td>
+                                <td id="esp"></td>
+                                <td id="lbl">
+                                    <label for=password>Contraseña:</label>
+                                </td>
+                                <td id="txt">
+                                    <input type="password" class="form-control" formControlName="password"  required/>
+                                    
+                                </td>
+                            </tr>
+                           
+                        </table>
+                        
+                    </div>
+                    <!-- <div class="form-group">
+                        
+>>>>>>> parent of 418bd23... restart
                     </div>
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" class="form-control" formControlName="nombre"/>
+<<<<<<< HEAD
                     </div>
                     <div class="form-group">
                         <label for="telefono">Telefono</label>
@@ -27,6 +114,19 @@
                     <div class="form-group">
                         <label for="longitud">Loongitud</label>
                         <input type="text" class="form-control" formControlName="lon"/>
+=======
+                    </div> -->
+                    <!-- <div class="form-group">
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="latitud">Latitud</label>
+                        <input type="text" class="form-control" formControlName="lat" [(ngModel)]= "latitud"/>
+                    </div> -->
+                    <!-- <div class="form-group">
+                        <label for="longitud">Loongitud</label>
+                        <input type="text" class="form-control" formControlName="lon" [(ngModel)]= "longi"/>
+>>>>>>> parent of 418bd23... restart
                     </div>
                     <div class="form-group">
                         <label for="email">Correo Eletrónico</label>
@@ -35,6 +135,7 @@
                     <div class="form-group">
                         <label for=password>Contraseña</label>
                         <input type="password" class="form-control" formControlName="password"/>
+<<<<<<< HEAD
                     </div>
                   
                         <button type="submit" class="btn btn-primary btn-lg btn-block">Registrar</button>
@@ -48,3 +149,86 @@
         </div>
     </div>
 </div>
+=======
+                    </div> -->
+                    <div class="map-container">
+                        <label  id="tit"><b><h5>Ubicación:</h5></b></label>
+                        <!-- <table>
+                            <tr>
+                                <td>
+                                    <label for=password>Contraseña</label>
+                                </td>
+                                <td>
+                                    <label for=password>Contraseña</label>
+                                </td>
+                                <td>
+                                    <label for=password>Contraseña</label>
+                                </td>
+                            </tr>
+                        </table> -->
+                        <div class="map-frame">
+                          <div id="map"></div>
+                          <table id="table2" >
+                              <tr *ngFor="let item of data">
+                                  <td>
+                                      <label >Cuidad: {{item.city}}</label>
+                                      
+                                     </td>
+                                  <td>
+                                      <label>Sector: {{item.road}}</label>
+                                      
+                                     </td>
+                                  <td>
+                                      <label> Avenida: {{item.country}} </label> 
+                                      
+                                    </td>
+                              </tr>
+                          </table>
+                        </div>
+                      </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary btn-block btn-lg " id="btnR">Registrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    #reg{
+        margin-top: 20px;
+    }
+    #tab{
+        width: 800px;
+        text-align: center;
+        padding: 10px;
+    }
+    #tit{
+        margin-left: 50px;
+    }
+    #btnR{
+        float: rigth;
+        
+    }
+    #table2{
+        margin-top: 7px;
+    }
+    #lbl{
+        width: 5px;
+        float: left;
+        
+    }
+    #txt{
+        height: 5px;
+        width: 250px;
+        margin: 2px;
+    }
+    #txt input{
+        height: 25px;
+    }
+    #text-center{
+        float: left;
+    }
+</style>
+
+>>>>>>> parent of 418bd23... restart

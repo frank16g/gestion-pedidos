@@ -33,7 +33,13 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/font-awesome/css/font-awesome.min.css",
+<<<<<<< HEAD
               "src/styles.scss"
+=======
+              "src/styles.scss",
+              "node_modules/mapbox-gl/dist/mapbox-gl.css",
+              "node_modules/leaflet/dist/leaflet.css"
+>>>>>>> parent of 418bd23... restart
             ],
             "scripts": []
           },

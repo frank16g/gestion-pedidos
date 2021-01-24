@@ -8,7 +8,12 @@ import { CheckLoginGuard } from './guards/check-login.guard';
 import { RepartidorPedidosNuevosComponent} from './components/repartidor-pedidos-nuevos/repartidor-pedidos-nuevos.component';
 import {RepartidorPedidosRealizadosComponent} from './components/repartidor-pedidos-realizados/repartidor-pedidos-realizados.component';
 import { AdminHomeComponent} from './components/admin-home/admin-home.component';
+<<<<<<< HEAD
 import {AdminRepartidoresComponent} from './components/admin-repartidores/admin-repartidores.component'
+=======
+import {AdminRepartidoresComponent} from './components/admin-repartidores/admin-repartidores.component';
+import { AdminCrearRepartidorComponent} from './components/admin-crear-repartidor/admin-crear-repartidor.component';
+>>>>>>> parent of 418bd23... restart
 
 import { from } from 'rxjs';
 
@@ -55,8 +60,19 @@ const routes: Routes = [
   {
     path: 'admin-productos',
     component:ProductsCrudComponent
+<<<<<<< HEAD
   }
 
+=======
+  },
+  {
+    path: 'admin-crear-repartidor',
+    canActivate:[CheckLoginGuard],
+    component:AdminCrearRepartidorComponent
+  }
+
+
+>>>>>>> parent of 418bd23... restart
 ];
 
 @NgModule({
