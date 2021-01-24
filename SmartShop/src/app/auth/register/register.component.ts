@@ -52,7 +52,7 @@ export class RegisterComponent implements OnInit, AfterViewInit  {
     try{
       const user = await this.autSvc.register(email, password);
       this.firebaseServiceService.createUsuario(email, cedula, apellido,
-        nombre, lat, lon, telefono).then(resp=>{
+        nombre, this.latitud, this.longi, telefono).then(resp=>{
         this.registerForm.reset();
         console.log(resp);
       }).catch(error => {
