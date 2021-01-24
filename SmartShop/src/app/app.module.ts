@@ -27,6 +27,8 @@ import { NavbarRepartidoresComponent } from './components/navbar-repartidores/na
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { NavbarAdminComponent } from './components/navbar-admin/navbar-admin.component';
 import { AdminRepartidoresComponent } from './components/admin-repartidores/admin-repartidores.component';
+import { AdminCrearRepartidorComponent } from './components/admin-crear-repartidor/admin-crear-repartidor.component';
+
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { AdminRepartidoresComponent } from './components/admin-repartidores/admi
     NavbarRepartidoresComponent,
     AdminHomeComponent,
     NavbarAdminComponent,
-    AdminRepartidoresComponent
+    AdminRepartidoresComponent,
+    AdminCrearRepartidorComponent
   ],
   imports: [
     BrowserModule,
@@ -53,8 +56,9 @@ import { AdminRepartidoresComponent } from './components/admin-repartidores/admi
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule
+    // NgbModule.forRoot()
   ],
-  providers: [CheckLoginGuard],//AuthService,CheckLoginGuard
+  providers: [],//AuthService,CheckLoginGuard
   bootstrap: [AppComponent]
 })
 export class AppModule { }
