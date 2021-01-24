@@ -12,9 +12,9 @@ import { ClientesListarProductosComponent } from './components/clientes-listar-p
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ClientePedidosRealizadosComponent } from './components/cliente-pedidos-realizados/cliente-pedidos-realizados.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { NavbarLoginComponent } from './auth/navbar-login/navbar-login.component';
 import { ProductsComponent } from './components/products/products.component';
-
 import { FormsModule } from '@angular/forms';
 import { ProductsCrudComponent } from './components/products-crud/products-crud.component';
 import { AngularFireStorageModule } from '@angular/fire/storage';
@@ -30,6 +30,7 @@ import { AdminRepartidoresComponent } from './components/admin-repartidores/admi
 import { AdminCrearRepartidorComponent } from './components/admin-crear-repartidor/admin-crear-repartidor.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,10 @@ import { AdminCrearRepartidorComponent } from './components/admin-crear-repartid
     PedidosComponent,
     NavbarComponent,
     ClientePedidosRealizadosComponent,
+
+    NavbarLoginComponent,
+    
+
     ProductsComponent,
     ProductsCrudComponent,
     RepartidorPedidosNuevosComponent,
@@ -49,14 +54,18 @@ import { AdminCrearRepartidorComponent } from './components/admin-crear-repartid
     NavbarAdminComponent,
     AdminRepartidoresComponent,
     AdminCrearRepartidorComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+
+    AngularFireModule.initializeApp(environment.firebase),
+    HttpClientModule,
+
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule
-    // NgbModule.forRoot()
   ],
   providers: [],//AuthService,CheckLoginGuard
   bootstrap: [AppComponent]

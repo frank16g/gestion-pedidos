@@ -1,3 +1,24 @@
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" routerLink="/home" routerLinkActive="active"><img src="./assets/hand_truck.svg" alt="" />Shop</a>
+  
+  
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+  
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login"  routerLinkActive="active">Login</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" routerLink="/register"  routerLinkActive="active">Registro</a></li>
+        </ul>
+      </div>
+    </div>
+  
+  </nav>
 <div class="log">
   <div class="row">
     <div class="col-md-6 mx-auto mt-5">
@@ -8,6 +29,7 @@
             <div class="form-group">
               <label for="email">Correo Eletrónico</label>
               <input type="email" class="form-control" formControlName="email" />
+
             </div>
             <div class="form-group">
               <label for=password>Contraseña</label>
@@ -26,3 +48,9 @@
     </div>
   </div>
 </div>
+<style>
+    #lo{
+        margin-top: 120px;
+    }
+</style>
+
